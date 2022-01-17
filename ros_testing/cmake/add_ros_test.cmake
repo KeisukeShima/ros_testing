@@ -78,4 +78,9 @@ function(add_ros_test filename)
     TIMEOUT "${_ros_test_TIMEOUT}"
     ${_ros_test_UNPARSED_ARGUMENTS}
   )
+  set_tests_properties(
+    "${_ros_test_TARGET}"
+    PROPERTIES
+    LABELS "${_ros_test_LABELS}"
+  )
 endfunction()
